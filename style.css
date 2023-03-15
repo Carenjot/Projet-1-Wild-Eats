@@ -6,6 +6,7 @@
 /*Navbarre*/
 .navbarre_header {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 15px;
 }
 
 .navbarre_header ul {
