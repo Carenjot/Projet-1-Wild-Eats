@@ -140,6 +140,16 @@ svg {
     align-items: center;
 }
 
+
+/*Footer*/
+
+.footer{
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    color: white    ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .img-carrousel{
     max-height: 10rem;
     padding :1rem;
@@ -157,4 +167,5 @@ svg {
 .image-fleche-gauche ,.image-fleche-droite{
     height: 1.5rem;
     width: 1.5rem;
+
 }
