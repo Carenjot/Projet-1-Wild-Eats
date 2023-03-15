@@ -121,8 +121,9 @@ svg {
 }
 /*Carrousel*/
 
-.carrousel{
+.carrousel {
     margin: 0;
+    margin-top: 10px;
 }
 
 .elem-carrousel{
@@ -139,33 +140,48 @@ svg {
     justify-content: center;
     align-items: center;
 }
-
-
-/*Footer*/
-
-.footer{
-    text-align: center;
-    margin: auto;
-    background-color: black;
-    color: white    ;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.img-carrousel{
+.img-carrousel {
+    padding: 1rem;
     max-height: 10rem;
-    padding :1rem;
+
 }
-.elem-carrousel main{
+
+.elem-carrousel main {
     background-color: var(--second-color-beige);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1rem;
 }
 
-.titre-elem-carrousel{
+.titre-elem-carrousel {
     text-align: center;
 }
 
-.image-fleche-gauche ,.image-fleche-droite{
+.image-fleche-gauche,
+.image-fleche-droite {
     height: 1.5rem;
     width: 1.5rem;
+
+}
+
+
+/*Footer*/
+footer {
+    background-color: #FBF5DF;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img {
+    height: 40px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    margin-right: 5px;
 
 }
