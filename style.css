@@ -101,6 +101,17 @@ svg {
     border-radius: 1rem;
 }
 
+/*Button catégories */
+
+
+.button_cat {
+  text-align: center;
+}
+
+.button_cat img {
+  max-width: 100%;
+  height: auto;}
+
 .card-resto ul li {
     padding-left : 2rem;
     display : block;
