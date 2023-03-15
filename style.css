@@ -54,6 +54,8 @@ svg {
     outline: none;
     flex-grow: 1;
 }
+
+/*Liste restaurants*/
 :root{
     --first-color-green : #BBCD49;
     --second-color-beige : #FBF5DF;
