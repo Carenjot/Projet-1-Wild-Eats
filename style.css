@@ -86,3 +86,11 @@ svg {
     max-width: 30rem;
     border-radius: 1rem;
 }
+
+/*Button catégories */
+
+.button_cat{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
