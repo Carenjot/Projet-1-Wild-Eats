@@ -103,11 +103,14 @@ svg {
 
 /*Button catégories */
 
-.button_cat{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+
+.button_cat {
+  text-align: center;
 }
+
+.button_cat img {
+  max-width: 100%;
+  height: auto;}
 
 .card-resto ul li {
     padding-left : 2rem;
