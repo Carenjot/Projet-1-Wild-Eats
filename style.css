@@ -1,1 +1,30 @@
+:root{
+    --first-color-green : #BBCD49;
+    --second-color-beige : #FBF5DF;
+    --third-color-yellow : #FDD937;
+    --fourth-color-saumon : #F57653;
+}
 
+.list-resto{
+    display : flex;
+    flex-direction: column;
+}
+
+.card-resto{
+    display : flex;
+    border : 1px solid black;
+    border-radius: 1rem;
+    margin : 1rem;
+    background-color: var(--second-color-beige);
+}
+
+.nom-resto, .description-resto{
+    padding : 0.5rem;
+    padding-left : 1rem;
+}
+
+.img-resto{
+    max-height: 20rem;
+    max-width: 30rem;
+    border-radius: 1rem;
+}
