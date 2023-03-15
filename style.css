@@ -117,8 +117,29 @@ svg {
 
 .card-resto ul li {
     padding-left : 2rem;
-
+    display: block;
 }
+/*Carrousel*/
+
+.carrousel{
+    margin: 0;
+}
+
+.elem-carrousel{
+    display : flex;
+    justify-content: space-around;
+    background: linear-gradient(#FFFFFF,#796d45);
+    padding-top : 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.fleche-droite, .fleche-gauche{
+    margin-left: 1rem;
+    margin-right:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*Footer*/
 
@@ -128,4 +149,23 @@ svg {
     background-color: black;
     color: white    ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img-carrousel{
+    max-height: 10rem;
+    padding :1rem;
+}
+.elem-carrousel main{
+    background-color: var(--second-color-beige);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+}
+
+.titre-elem-carrousel{
+    text-align: center;
+}
+
+.image-fleche-gauche ,.image-fleche-droite{
+    height: 1.5rem;
+    width: 1.5rem;
+
 }
