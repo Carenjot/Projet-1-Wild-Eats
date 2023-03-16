@@ -215,8 +215,12 @@ footer {
 }
 /*margin barre de recherche*/
 .search-box{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    }
+
 }
 /*button*/
 .button_cat {
