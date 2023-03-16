@@ -1,8 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Courgette', cursive;
 }
 
+/*Couleur du body */
+body {
+    background-color: var(--second-color-beige);
+}
 /*Navbarre*/
 .navbarre_header {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -89,18 +94,25 @@ svg {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1rem;
     margin : 1rem;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: flex-start ;
+    border: thick double #46633d;
+    background-color: rgb(245, 245, 240);
+    height: 8rem;
+
 }
 
 .nom-resto, .description-resto{
     padding : 0.5rem;
     padding-left : 1rem;
+    padding-top : 1rem;
 }
 
 .img-resto{
-    width : 100%;
+    width : 40%; 
     border-radius: 1rem;
+    padding: 0.5rem;
+
 }
 
 /*Button catégories */
@@ -129,7 +141,7 @@ svg {
 .elem-carrousel{
     display : flex;
     justify-content: space-around;
-    background: linear-gradient(#FFFFFF,#796d45);
+    background: radial-gradient(var(--second-color-beige),  white );
     padding-top : 0.2rem;
     padding-bottom: 0.2rem;
 }
@@ -147,7 +159,7 @@ svg {
 }
 
 .elem-carrousel main {
-    background-color: var(--second-color-beige);
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1rem;
 }
