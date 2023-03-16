@@ -196,3 +196,60 @@ footer {
     margin-right: 10px;
 
 }
+
+@media (min-width: 600px){
+    /*header*/
+    .navbarre_header {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+        .navbarre_header ul {
+            display: flex;
+            flex-direction: column;
+        }
+    .navbarre_phraseaccroche{
+        font-size: 25px;
+    }
+.navbarre_logo{
+    width: 170px;
+}
+/*margin barre de recherche*/
+.search-box{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*button*/
+.button_cat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+.button_cat img {
+    width: 90%;
+    height: auto;
+    gap: 30px;
+}
+
+/*liste resto*/
+
+.card-resto {
+    width: 90%;
+    height: 85%;
+}
+
+.list-resto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.description-resto{
+    margin-right: 40px;
+}
+
+}
