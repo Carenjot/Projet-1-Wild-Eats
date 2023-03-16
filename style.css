@@ -251,4 +251,13 @@ footer {
     margin-right: 40px;
 }
 
+/**Footer**/
+.footer img {
+    height: 4.2rem;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    padding-top: 8px;
+}
 }
