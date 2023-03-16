@@ -90,7 +90,6 @@ body {
     margin : 1rem;
     flex-direction: row-reverse;
     justify-content: flex-start ;
-    border: thick double #46633d;
     background-color: rgb(245, 245, 240);
     height: 8rem;
 
@@ -105,7 +104,7 @@ body {
 .img-resto{
     width : 40%; 
     border-radius: 1rem;
-    padding: 0.5rem;
+    
 
 }
 
