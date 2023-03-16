@@ -5,34 +5,28 @@
 
 /*Navbarre*/
 .navbarre_header {
+    background-color: #FBF5DF;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 15px;
 }
 
 .navbarre_header ul {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .navbarre_logo {
     padding-top: 2px;
-    width: 12rem;
-}
-
-.navbarre_utilisateurimg {
-    width: 2rem;
-    padding-top: 1rem;
-    padding-right: 1rem;
-
+    width: 7rem;
 }
 
 .navbarre_header li {
     display: inline;
 }
 
-svg {
-    padding-top: 1rem;
+.navbarre_header div {
     padding-left: 1rem;
+    font-size: 1.1rem;
 }
 
 /*Barre de recherche*/
