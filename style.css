@@ -251,12 +251,24 @@ footer {
     margin-right: 40px;
 }
 
+
 /**Barre de recherche**/
 .search-box {
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 20rem;
     margin-right: 20rem;
+}
+
+
+/**Footer**/
+.footer img {
+    height: 4.2rem;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    padding-top: 8px;
 }
 
 }
