@@ -90,11 +90,14 @@ function CreatedAllCards (filter) {
     return cards;
   }
 
-/*   document.querySelector(".search-input").addEventListener("change", () => {
-    const filter = document.querySelector(".search-input").value;
-    document.querySelector(".list-resto").innerHTML = CreatedAllCards(filter);
+  document.querySelector(".button-search").addEventListener("click", (event) => {
+    event.preventDefault()
+
+   const filter = document.querySelector("#search-bar").value;
+       document.querySelector(".list-resto").innerHTML = CreatedAllCards(filter);
+       document.querySelector("#search-bar").value = ""
     });
- */
+
     document.querySelector(".list-resto").innerHTML = CreatedAllCards();
 
    
