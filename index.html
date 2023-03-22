@@ -1,58 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Titre du Site-->
     <title>Wild Eats</title>
     <!--Favicon-->
-     <link rel="shortcut icon" href="Photos/favicon.ico.ico" />
+    <link rel="shortcut icon" href="Photos/favicon.ico.ico" />
     <!--Lien CSS-->
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-</head>
-<body>
-<!--NavBarre-->
-<header class="navbarre_header">
-  <ul>
-  <li><img class="navbarre_logo" src="Photos/Logo-rond.png" /></li>
-  <li class="navbarre_phraseaccroche">La ville des Rois, des Reines et des restaurants</li>
-  </ul>
-</header>
 
-<!--Carrousel-->
-<section class="carrousel">
-  <article class="elem-carrousel">
-    <aside class ="fleche-gauche"><img class ="image-fleche-gauche" src="img/flechegauche.png"/></aside>
-    <main>
-      <img src="img/img-resto-quatre.jpg" class="img-carrousel"/>
-      <h4 class ="titre-elem-carrousel">Test titre element</h4>
-    </main>
-    <aside class="fleche-droite"><img class ="image-fleche-droite" src="img/flechedroite.png"/></aside>
-  </article>
-</section>
-<!--Button catégorie de restaurants-->
-<br>
-<form>
-  <div class="button_cat">
-    <div class="button1">
-      <a href="">
-      <img src="./img/buttons_1.png" alt="buttons_1" width="200">
-      </a>
-    </div>
-    <div class="button2">
-      <img src="./img/buttons_2.png" alt="buttons_2" width="200">
-    </div>
-    <div class="button3">
-      <img src="./img/buttons_3.png" alt="buttons_3" width="200">
-    </div>
-  </div>
-</form>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-<!--Barre de recherche-->
+    <!--Lien JS-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--NavBarre-->
+    <header class="navbarre_header">
+      <ul>
+        <li><img class="navbarre_logo" src="Photos/Logo-rond.png" /></li>
+        <li class="navbarre_phraseaccroche">
+          La ville des Rois, des Reines et des restaurants
+        </li>
+      </ul>
+    </header>
+    
+    <!--Carrousel-->
+
+    <section class="slider-wrapper">
+      <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+      <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+      <ul class="slides-container" id="slides-container">
+        <li class="slide">
+          <article>
+            <aside></aside>
+            <div>
+              <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+              <h4 class="titre-elem-carrousel">Test titre element</h4>
+            </div>
+            <aside></aside>
+          </article>
+        </li>
+        <li class="slide">
+          <article>
+            <aside></aside>
+            <div>
+              <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+              <h4 class="titre-elem-carrousel">Test titre element</h4>
+            </div>
+            <aside></aside>
+          </article>
+        </li>
+        <li class="slide">
+          <article>
+            <aside></aside>
+            <div>
+              <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+              <h4 class="titre-elem-carrousel">Test titre element</h4>
+            </div>
+            <aside></aside>
+          </article>
+        </li>
+        <li class="slide">
+          <article>
+            <aside></aside>
+            <div>
+              <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+              <h4 class="titre-elem-carrousel">Test titre element</h4>
+            </div>
+            <aside></aside>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <script src="./carrousel.js"></script>
+    <!--fin test-->
+    <!--<section id="carrousel">
+      <aside id="fleche-gauche">
+        <img class="image-fleche-gauche" src="img/flechegauche.png" />
+      </aside>
+      <article class="elem-carrousel">
+        <div>
+          <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+          <h4 class="titre-elem-carrousel">Test titre element</h4>
+        </div>
+      </article>
+      <article class="elem-carrousel">
+        <div>
+          <img src="img/img-resto-quatre.jpg" class="img-carrousel" />
+          <h4 class="titre-elem-carrousel">Test titre element</h4>
+        </div>
+      </article>
+      <aside id="fleche-droite">
+        <img class="image-fleche-droite" src="img/flechedroite.png" />
+      </aside>
+    </section>-->
+    <!--Button catégorie de restaurants-->
+    <br />
+    <form>
+      <div class="button_cat">
+        <div class="button1">
+          <a href="">
+            <img src="./img/buttons_1.png" alt="buttons_1" width="200" />
+          </a>
+        </div>
+        <div class="button2">
+          <img src="./img/buttons_2.png" alt="buttons_2" width="200" />
+        </div>
+        <div class="button3">
+          <img src="./img/buttons_3.png" alt="buttons_3" width="200" />
+        </div>
+      </div>
+    </form>
+    
+    
+    <!--Barre de recherche-->
 <form>
   <div class="search-box">
     <div class="search-icon">&#x1F50D;</div>
@@ -61,16 +130,14 @@
   </div>
 </form>
 
-<!--test JS-->
-<section class="list-resto">
+    <section class="list-resto">
 
-</section>
-<footer>
-  <section class="footer">
-    <img src="./Photos/Logo-rond.png" alt="logo-footer">
-    <p>2023 -Wild Eats (Wild Code School ) &copy;</p>
-   </section>
-</footer>
-<script src="cards.js"></script>
-</body>
+    </section>
+    <footer>
+      <section class="footer">
+        <img src="./Photos/Logo-rond.png" alt="logo-footer"">
+        <p>2023 -Wild Eats (Wild Code School ) &copy;</p>
+      </section>
+    </footer>
+  </body>
 </html>
