@@ -103,7 +103,8 @@ body {
 
 .img-resto {
   width: 40%;
-  border-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 /*Button catégories */
