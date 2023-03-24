@@ -111,6 +111,31 @@ body {
   min-width: 10rem;
 }
 
+.lien-resto{
+  color : black;
+  text-decoration: none;
+}
+
+.lien-resto:hover{
+  scale: 1.05;
+  transition: all 0.2s;
+}
+
+.no-result{
+  text-align: center;
+}
+
+.description-resto{
+  display: none;
+}
+
+.adresse-resto{
+  display: block;
+}
+
+.text-resto{
+  text-align: center;
+}
 /*Button catégories */
 
 .button_cat {
@@ -345,6 +370,13 @@ footer {
     padding: 0;
     overflow:hidden;
   }
+
+  .description-resto{
+    display: block;
+  }
   
+  .adresse-resto{
+    display: none;
+  }
 }
 

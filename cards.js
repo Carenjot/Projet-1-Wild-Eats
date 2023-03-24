@@ -1,75 +1,94 @@
 //Listes des restaurants
 class restaurant {
-  constructor(restaurant,desc, adresse, link, image) {
-      this.restaurant = restaurant;
-      this.desc = desc;
-      this.adresse = adresse;
-      this.link = link;
-      this.image = image;
+  constructor(restaurant, desc, adresse, link, image) {
+    this.restaurant = restaurant;
+    this.desc = desc;
+    this.adresse = adresse;
+    this.link = link;
+    this.image = image;
   }
 }
 const restoDispo = [
-  new restaurant (
-      " L’Expérience",
-      " Restaurant rémois au concept novateur, l’Expérience privilégie le partage autour de l’assiette!",
-      " 83 Place Drouet d’Erlon",
-      " https://www.lexperience-reims.fr/",
-      " img/lexperience.png",
+  new restaurant(
+    "L’Expérience",
+    "Restaurant rémois au concept novateur, l’Expérience privilégie le partage autour de l’assiette!",
+    "83 Place Drouet d’Erlon",
+    "https://www.lexperience-reims.fr/",
+    "img/lexperience.png"
   ),
-{
-      restaurant: "L’Alambic",
-      desc: "L’Alambic est un restaurant des terroirs où les assiettes raviront vos papilles, vos yeux ainsi que votre appétit.",
-      adresse: "63 bis, rue de Chativesle",
-      link: "https://www.restaurant-lalambic.fr/",
-      image: "img/lalambic.png",
-  },
-{
-      restaurant: "Green sur mesure",
-      desc: "Green sur mesure est le premier concept convivial et sain. Salades, pâtes, sandwichs, pokés, soupes : chacun peut composer son repas chaud ou froid à partir des nombreuses bases et ingrédients frais proposés chaque jour.",
-      adresse: "4 Bis rue Gaston Boyer",
-      link: "https://www.greensurmesure.fr/le-concept/",
-      image: "img/greensurmesure.png",
-  },
-{
-      restaurant: "Koboon",
-      desc: "Pad Thaï, Wok bœuf Koh Tao, Nasi goreng à la mode Thaï... dégustez une diversité de saveurs typiquement thaïlandaises en provenance de Bangkok, Phuket.",
-      adresse: "9, boulevard du Général Leclerc",
-      link: "https://www.koboon-resto.fr/",
-      image: "img/koboon.png",
+  {
+    restaurant: "L’Alambic",
+    desc: "L’Alambic est un restaurant des terroirs où les assiettes raviront vos papilles, vos yeux ainsi que votre appétit.",
+    adresse: "63 bis, rue de Chativesle",
+    link: "https://www.restaurant-lalambic.fr/",
+    image: "img/lalambic.png",
   },
   {
-      restaurant: "Come Prima",
-      desc: "Une échappée italienne au cœur de la Cité des Sacres. Une cuisine authentique. Chacun de nos plats est cuisiné maison.",
-      adresse: "3 rue Buirette",
-      link: "https://come-prima-reims.eatbu.com/?lang=fr",
-      image: "img/comeprima.png",
+    restaurant: "Green sur mesure",
+    desc: "Green sur mesure est le premier concept convivial et sain. Salades, pâtes, sandwichs, pokés, soupes : chacun peut composer son repas chaud ou froid à partir des nombreuses bases et ingrédients frais proposés chaque jour.",
+    adresse: "4 Bis rue Gaston Boyer",
+    link: "https://www.greensurmesure.fr/le-concept/",
+    image: "img/greensurmesure.png",
   },
-      {
-      restaurant: "L’Oriental",
-      desc: "Véritable dépaysement, pour vos sorties entre ami(e)s ou déjeuners professionnels, ainsi que vos événements.",
-      adresse: "13 rue Gerbert",
-      link: "http://restaurant-couscous-reims.com/",
-      image: "img/loriental.png",
-  }
+  {
+    restaurant: "Koboon",
+    desc: "Pad Thaï, Wok bœuf Koh Tao, Nasi goreng à la mode Thaï... dégustez une diversité de saveurs typiquement thaïlandaises en provenance de Bangkok, Phuket.",
+    adresse: "9, boulevard du Général Leclerc",
+    link: "https://www.koboon-resto.fr/",
+    image: "img/koboon.png",
+  },
+  {
+    restaurant: "Come Prima",
+    desc: "Une échappée italienne au cœur de la Cité des Sacres. Une cuisine authentique. Chacun de nos plats est cuisiné maison.",
+    adresse: "3 rue Buirette",
+    link: "https://come-prima-reims.eatbu.com/?lang=fr",
+    image: "img/comeprima.png",
+  },
+  {
+    restaurant: "L’Oriental",
+    desc: "Véritable dépaysement, pour vos sorties entre ami(e)s ou déjeuners professionnels, ainsi que vos événements.",
+    adresse: "13 rue Gerbert",
+    link: "http://restaurant-couscous-reims.com/",
+    image: "img/loriental.png",
+  },
 ];
 //Create cards
 function CreateCard(restaurant) {
   return `
-       <article class="card-resto">
+     <a class="lien-resto" href = "${restaurant.link}">  
+      <article class="card-resto">
          <img src=${restaurant.image} class="img-resto"/>
-         <aside>
+         <aside class="text-resto">
            <h3 class="nom-resto">${restaurant.restaurant}</h3>
            <p class="description-resto">${restaurant.desc}</p>
+           <p class="adresse-resto">${restaurant.adresse}</p>
          </aside>
        </article>
-  `
+    </a>
+  `;
 }
 //Index.js
-function createAllCards() {
+function createAllCards(filter) {
   let cards = "";
   for (let i = 0; i < restoDispo.length; i++) {
+    if (filter == null || restoDispo[i].restaurant.startsWith(filter)) {
       cards += CreateCard(restoDispo[i]);
+    }
+  }
+
+  if(cards == ""){
+    cards = `<h2 class = "no-result" >Pas de résultats</h2>`;
   }
   return cards;
 }
+
+document.querySelector(".search-bar").addEventListener("change", () => {
+  const filter = document.querySelector(".search-bar").value;
+  document.querySelector(".list-resto").innerHTML = createAllCards(filter);
+});
+
+
+
+
 document.querySelector(".list-resto").innerHTML = createAllCards();
+
