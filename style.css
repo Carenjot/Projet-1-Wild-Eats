@@ -33,7 +33,6 @@ body {
   padding-left: 1rem;
   font-size: 1.1rem;
 }
-
 /*Barre de recherche*/
 .search-icon {
   font-size: 20px;
@@ -111,6 +110,35 @@ body {
   min-width: 10rem;
 }
 
+.lien-resto{
+  color : black;
+  text-decoration: none;
+}
+
+.lien-resto:hover{
+  scale: 1.05;
+  transition: all 0.2s;
+}
+
+.no-result{
+  text-align: center;
+}
+
+.description-resto{
+  display: none;
+}
+
+.adresse-resto{
+  display: block;
+}
+
+.text-resto{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
 /*Button catégories */
 
 .button_cat {
@@ -121,6 +149,11 @@ body {
 .button_cat img {
   max-width: 97%;
   height: auto;
+}
+
+.button-categorie:hover{
+  scale : 1.05;
+  transition: all 0.2s;
 }
 
 .card-resto ul li {
@@ -250,6 +283,7 @@ footer {
   .navbarre_header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-bottom: 20px;
   }
   .navbarre_header ul {
@@ -345,6 +379,13 @@ footer {
     padding: 0;
     overflow:hidden;
   }
+
+  .description-resto{
+    display: block;
+  }
   
+  .adresse-resto{
+    display: none;
+  }
 }
 
