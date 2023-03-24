@@ -243,8 +243,14 @@ body {
   border-radius: 1rem;
 }
 
+.nom-restaurant-carrousel {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 .titre-elem-carrousel {
   text-align: center;
+  padding-bottom: 0.5rem;
 }
 
 .image-fleche-gauche,
