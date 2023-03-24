@@ -33,7 +33,6 @@ body {
   padding-left: 1rem;
   font-size: 1.1rem;
 }
-
 /*Barre de recherche*/
 .search-icon {
   font-size: 20px;
@@ -134,6 +133,10 @@ body {
 }
 
 .text-resto{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
 }
 /*Button catégories */
@@ -146,6 +149,11 @@ body {
 .button_cat img {
   max-width: 97%;
   height: auto;
+}
+
+.button-categorie:hover{
+  scale : 1.05;
+  transition: all 0.2s;
 }
 
 .card-resto ul li {
@@ -275,6 +283,7 @@ footer {
   .navbarre_header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-bottom: 20px;
   }
   .navbarre_header ul {

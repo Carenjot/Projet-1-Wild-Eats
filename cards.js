@@ -1,11 +1,12 @@
 //Listes des restaurants
 class restaurant {
-  constructor(restaurant, desc, adresse, link, image) {
+  constructor(restaurant, desc, adresse, link, image, categorie) {
     this.restaurant = restaurant;
     this.desc = desc;
     this.adresse = adresse;
     this.link = link;
     this.image = image;
+    this.categorie = categorie;
   }
 }
 const restoDispo = [
@@ -14,7 +15,8 @@ const restoDispo = [
     "Restaurant rémois au concept novateur, l’Expérience privilégie le partage autour de l’assiette!",
     "83 Place Drouet d’Erlon",
     "https://www.lexperience-reims.fr/",
-    "img/lexperience.png"
+    "img/lexperience.png",
+    "français"
   ),
   {
     restaurant: "L’Alambic",
@@ -22,6 +24,7 @@ const restoDispo = [
     adresse: "63 bis, rue de Chativesle",
     link: "https://www.restaurant-lalambic.fr/",
     image: "img/lalambic.png",
+    categorie: "français"
   },
   {
     restaurant: "Green sur mesure",
@@ -29,6 +32,7 @@ const restoDispo = [
     adresse: "4 Bis rue Gaston Boyer",
     link: "https://www.greensurmesure.fr/le-concept/",
     image: "img/greensurmesure.png",
+    categorie: "veggie"
   },
   {
     restaurant: "Koboon",
@@ -36,6 +40,7 @@ const restoDispo = [
     adresse: "9, boulevard du Général Leclerc",
     link: "https://www.koboon-resto.fr/",
     image: "img/koboon.png",
+    categorie: "veggie"
   },
   {
     restaurant: "Come Prima",
@@ -43,6 +48,7 @@ const restoDispo = [
     adresse: "3 rue Buirette",
     link: "https://come-prima-reims.eatbu.com/?lang=fr",
     image: "img/comeprima.png",
+    categorie: "italien"
   },
   {
     restaurant: "L’Oriental",
@@ -50,6 +56,7 @@ const restoDispo = [
     adresse: "13 rue Gerbert",
     link: "http://restaurant-couscous-reims.com/",
     image: "img/loriental.png",
+    categorie: "other"
   },
 ];
 //Create cards
@@ -68,10 +75,10 @@ function CreateCard(restaurant) {
   `;
 }
 //Index.js
-function createAllCards(filter) {
+function createAllCards(filter , categorie) {
   let cards = "";
   for (let i = 0; i < restoDispo.length; i++) {
-    if (filter == null || restoDispo[i].restaurant.startsWith(filter)) {
+    if ((filter == null || restoDispo[i].restaurant.startsWith(filter)) || categorie == restoDispo[i].categorie) {
       cards += CreateCard(restoDispo[i]);
     }
   }
@@ -87,8 +94,17 @@ document.querySelector(".search-bar").addEventListener("change", () => {
   document.querySelector(".list-resto").innerHTML = createAllCards(filter);
 });
 
-
-
-
 document.querySelector(".list-resto").innerHTML = createAllCards();
+
+
+let buttons = document.getElementsByTagName("div");
+
+for(let i = 0 ; i < buttons.length ; i++){
+  if(buttons[i].className == "button-categorie"){
+    buttons[i].addEventListener("click", () =>{
+      const categorie = buttons[i].getAttribute('id');
+      document.querySelector(".list-resto").innerHTML = createAllCards("no filter", categorie);  
+    });
+  }
+}
 
